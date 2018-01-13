@@ -4,6 +4,8 @@ Below you will find some information on how to perform common tasks.<br>
 
 After you clone this repository, please run `npm install`, and after it you can use available scripts.
 
+Project use linter - eslint.
+
 ## Available Scripts
 
 In the project directory, you can run:
