@@ -23,6 +23,12 @@
   font-size: large;
 }
 
+.App ul li {
+  height: 100px;
+  margin-top: 10px;
+  background: #334a43
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
