@@ -10,9 +10,6 @@ let mapStateToProps = (store) => {
 };
 
 class App extends Component {
-  componentDidMount(){
-    // window.addEventListener('scroll', this.loadMore, false);
-  }
 
   loadMore(){
     this.props.dispatch(loadMore(20));
@@ -20,7 +17,7 @@ class App extends Component {
 
   render() {
     const { blocks } = this.props;
-    const mappedBlocks = blocks.map(block => <li>block</li>)
+    const mappedBlocks = blocks.map((block, id) => <li key={id}>block</li>)
 
     return (
       <div className="App">
@@ -30,7 +27,7 @@ class App extends Component {
         <ul>
           {mappedBlocks}
         </ul>
-        <p className="App-intro">
+        <p className="App-intro" onClick={this.loadMore.bind(this)}>Load more
         </p>
       </div>
     );
