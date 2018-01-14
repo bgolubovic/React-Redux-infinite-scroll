@@ -16,6 +16,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { blocks } = this.props;
     const mappedBlocks = blocks.map((block, id) => <li key={id}>block</li>)
 

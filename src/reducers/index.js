@@ -5,12 +5,19 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
 		case 'LOAD_MORE':
-			state = {...state, blocks: initialState.blocks + action.amount};
+			state = loadMoreBlocks(state, action);
             break;
 		default:
             break;
     }
     return state;
+};
+
+const loadMoreBlocks = (state, action) => {
+    return {
+        ...state,
+        blocks: [...Array(state.blocks.length + action.amount).keys()]
+    }
 };
 
 export default reducer;
